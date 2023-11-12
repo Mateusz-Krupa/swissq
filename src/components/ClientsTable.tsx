@@ -66,7 +66,7 @@ const ClientsTable: React.FC<TableProps> = ({ clients, setActivePortfolio, openD
               <TableHeader
                 title={head.title}
                 field={head.field}
-                handleSort={handleSort}
+                handleSort={tableColumns.length -1 !== index ? handleSort : undefined}
               ></TableHeader>
             </th>
           ))}
